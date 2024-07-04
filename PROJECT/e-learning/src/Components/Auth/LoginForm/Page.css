@@ -1,0 +1,153 @@
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  height: 100%;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.home-nav {
+  width: 200%;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.intro-logo {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.nav-head {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+  width: 80%;
+}
+
+.coursesButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.coursesButton:hover {
+  background-color: #0056b3;
+}
+
+.right {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.course {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: start;
+}
+.coursesButton1 {
+  display: flex;
+}
+.custom-dialog .MuiDialog-paper {
+  display: flex;
+  /* width: 90% !important; */
+  min-height: 80vh;
+  max-height: 90vh;
+  width: 60vw !important;
+  border: #ffffff;
+  max-width: 100vw !important;
+}
+
+.custom-dialog .MuiDialog-container {
+  /* display: flex; */
+  width: 100% !important;
+}
+
+.custom-title {
+  border: #333;
+  border-radius: 0cqi;
+}
+.custom-window {
+  display: flex;
+  justify-content: space-between;
+  border: transparent;
+  width: 100%;
+  height: 200px;
+  border-radius: 1px solid #ccc;
+  color: white;
+  overflow: hidden;
+  min-height: 200px;
+}
+.custom-window1 {
+  width: 50%;
+  height: 250px;
+  cursor: pointer;
+  flex-wrap: wrap;
+  display: inline-flex;
+  /* padding: 15px 32px ;
+  align-items: center; */
+  justify-content: start;
+  background-color: transparent; /* Example background color */
+  color: transparent;
+  font-size: 16px; /* Example font size */
+  text-decoration: none; /* Remove underlines */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+.custom-window1 button {
+  color: white;
+  width: 14rem;
+  height: 13rem;
+  margin: 2rem 0 0 3rem;
+}
+.a button {
+  background-image: url("../../../React.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-origin: border-box;
+}
+.b button {
+  background-image: url("../../../HTML.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-origin: border-box;
+}
+.c button {
+  background-image: url("../../../Git.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-origin: border-box;
+}
+.d button {
+  background-image: url("../../../js_logo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-origin: border-box;
+}
