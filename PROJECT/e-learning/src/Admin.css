@@ -1,20 +1,19 @@
-
 body {
-    font-family: 'poppins', sans-serif;
-    -webkit-font-smoothings: antialiased;
-    -moz-osx-font-smoothings: grayscale;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: rgb(167, 161, 106);
-    background-image: url('./pexels-photo-707582.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  font-family: "poppins", sans-serif;
+  -webkit-font-smoothings: antialiased;
+  -moz-osx-font-smoothings: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(167, 161, 106);
+  background-image: url("./picturereact.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .Main-body img {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
 }

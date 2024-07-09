@@ -8,7 +8,6 @@ import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
-// import {'useNavigate'} from 'react-router-dom';
 
 const Page = () => {
   const navigate = useNavigate();
@@ -41,6 +40,16 @@ const Page = () => {
           </div>
         </nav>
       </div>
+
+      <div>
+        <br />
+        <h1 className="quote">
+          "Empowering learners with the tools to master full stack development,
+          one course at a time."
+        </h1>
+      </div>
+      <div className="person"></div>
+
       <Dialog
         className="custom-dialog"
         open={isDialogOpen}

@@ -7,6 +7,7 @@ import LoginForm from "./Components/Auth/LoginForm/LoginForm";
 
 import Page from "./Components/Auth/LoginForm/Page";
 import React1 from "./Components/Auth/LoginForm/React1";
+import SignUpForm from "./Components/Auth/LoginForm/SignUpForm";
 // import Html1 from "./Components/Html1";
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="/path" element={<Page />} />
           <Route path="/react" element={<React1 />} />
+          <Route path="/SignUpForm" element={<SignUpForm />} />
+          <Route path="/login" element={<LoginForm />} />
+
           {/* <Route path="/path" element={<Page />} />
           <Route path="/html" element={<Html1 />} /> */}
         </Routes>

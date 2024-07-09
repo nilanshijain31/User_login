@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./LoginForm.css";
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import SignUpForm from "./SignUpForm";
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -23,7 +24,15 @@ const LoginForm = () => {
     if (inputValue.userName && inputValue.password) {
       navigate("/path");
     } else {
-      setOpen(true); // Show Snackbar on login error
+      setOpen(true);
+    }
+  };
+
+  const handleSignUp = () => {
+    if (inputValue.userName && inputValue.password) {
+      navigate("/SignUpForm");
+    } else {
+      setOpen(true);
     }
   };
 
@@ -69,7 +78,7 @@ const LoginForm = () => {
           </button>
           <div className="register-link">
             <p>
-              Don't have an account? <a href="#"> Register</a>{" "}
+              Don't have an account? <Link to="/SignUpForm">Register</Link>{" "}
             </p>
           </div>
         </form>
