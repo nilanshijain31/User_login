@@ -8,22 +8,39 @@ import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
+import settinglogo from "../../../../public/assets/setting.jpg";
+import { Link } from "react-router-dom";
 
 const Page = () => {
   const navigate = useNavigate();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isAllCoursesDialogOpen, setIsAllCoursesDialogOpen] = useState(false);
+  const [isSettingDialogOpen, setIsSettingDialogOpen] = useState(false);
+
+  const closeAllCoursesDialog = () => {
+    setIsAllCoursesDialogOpen(false);
+  };
 
   const handleAllCoursesClick = () => {
-    setIsDialogOpen(true);
+    setIsAllCoursesDialogOpen(true);
   };
 
-  const closeDialog = () => {
-    setIsDialogOpen(false);
+  const closeSettingDialog = () => {
+    setIsSettingDialogOpen(false);
   };
-  const handleClick = () => {
-    navigate("/react");
+
+  const handleSettingClick = () => {
+    setIsSettingDialogOpen(true);
   };
-  console.log(assets, "console me this.");
+
+  const handleLogout = () => {
+    navigate("/login");
+    setIsSettingDialogOpen(false);
+  };
+
+  const handleClick = (route) => {
+    navigate(`/${route}`);
+    setIsAllCoursesDialogOpen(false);
+  };
 
   return (
     <>
@@ -38,6 +55,14 @@ const Page = () => {
               My Courses
             </button>
           </div>
+          <Link className="Setting_conatin" to="#">
+            <img
+              src={settinglogo}
+              alt="Setting Logo"
+              className="setting_logo"
+              onClick={handleSettingClick}
+            />
+          </Link>
         </nav>
       </div>
 
@@ -52,8 +77,8 @@ const Page = () => {
 
       <Dialog
         className="custom-dialog"
-        open={isDialogOpen}
-        onClose={closeDialog}
+        open={isAllCoursesDialogOpen}
+        onClose={closeAllCoursesDialog}
         sx={{ width: "100vw !important" }}
         PaperProps={{ className: "paperPropClass" }}
       >
@@ -64,28 +89,28 @@ const Page = () => {
           <div className="custom-window1 a">
             {
               <p>
-                <button onClick={() => handleClick()}></button>
+                <button onClick={() => handleClick("react")}></button>
               </p>
             }
           </div>
           <div className="custom-window1 b">
             {
               <p>
-                <button onClick={() => handleClick()}></button>
+                <button onClick={() => handleClick("html")}></button>
               </p>
             }
           </div>
           <div className="custom-window1 c">
             {
               <p>
-                <button onClick={() => handleClick()}></button>
+                <button onClick={() => handleClick("git")}></button>
               </p>
             }
           </div>
           <div className="custom-window1 d">
             {
               <p>
-                <button onClick={() => handleClick}></button>
+                <button onClick={() => handleClick("js")}></button>
               </p>
             }
           </div>
@@ -93,12 +118,47 @@ const Page = () => {
           {/* <p>React, HTML CSS, JS, Git</p> */}
         </DialogContent>
         <DialogActions>
-          <Button onClick={closeDialog} color="primary">
+          <Button onClick={closeAllCoursesDialog} color="primary">
             Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      <div className="D2"></div>
+      <Dialog
+        open={isSettingDialogOpen}
+        onClose={closeSettingDialog}
+        maxWidth="sm"
+        fullWidth
+        sx={{
+          "& .MuiDialogTitle-root": {
+            backgroundColor: "black",
+            color: "#fff",
+          },
+          "& .MuiDialogContent-root": {
+            padding: "20px",
+          },
+          "& .MuiDialogActions-root": {
+            padding: "15px 20px",
+            backgroundColor: "light gray",
+          },
+        }}
+      >
+        <DialogTitle>Logout</DialogTitle>
+        <DialogContent>
+          <p>Are you sure you want to logout?</p>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={closeSettingDialog} color="primary">
+            Cancel
+          </Button>
+          <Button onClick={handleLogout} color="primary">
+            Logout
           </Button>
         </DialogActions>
       </Dialog>
     </>
   );
 };
+
 export default Page;

@@ -4,11 +4,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import "./Admin";
 import LoginForm from "./Components/Auth/LoginForm/LoginForm";
-
 import Page from "./Components/Auth/LoginForm/Page";
-import React1 from "./Components/Auth/LoginForm/React1";
+import React1 from "./Components/Auth/AllCourses/React";
 import SignUpForm from "./Components/Auth/LoginForm/SignUpForm";
-// import Html1 from "./Components/Html1";
+import Js from "./Components/Auth/AllCourses/Js";
+import Html from "./Components/Auth/AllCourses/Html";
+import Git from "./Components/Auth/AllCourses/Git";
 
 function App() {
   return (
@@ -21,29 +22,18 @@ function App() {
           <Route path="/react" element={<React1 />} />
           <Route path="/SignUpForm" element={<SignUpForm />} />
           <Route path="/login" element={<LoginForm />} />
-
-          {/* <Route path="/path" element={<Page />} />
-          <Route path="/html" element={<Html1 />} /> */}
+          <Route path="/js" element={<Js />} />
+          <Route path="/html" element={<Html />} />
+          <Route path="/git" element={<Git />} />
+          <Route exact path="/" component={<Page />} />
+          <Route path="/react" component={<React1 />} />
+          <Route exact path="/" component={<Page />} />
+          <Route path="/html" component={<Html />} />
+          <Route exact path="/" component={<Page />} />
+          <Route path="/git" component={<Git />} />
+          <Route exact path="/" component={<Page />} />
         </Routes>
       </div>
-      {/* <div className='Html'>
-        <Routes> 
-        <Route path="/" element={<Page />} />
-        <Route path="/html" element={<HTML1 />} />
-        </Routes>
-      </div> */}
-      {/* <div className='Js'>
-        <Routes> 
-        <Route path="/" element={<Page />} />
-        <Route path="/js" element={<Js1/>} />
-        </Routes>
-      </div> */}
-      {/* <div className='Git'>
-        <Routes> 
-        <Route path="/" element={<Page />} />
-        <Route path="/git" element={<Git1 />} />
-        </Routes>
-      </div> */}
     </>
   );
 }

@@ -7,7 +7,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: rgb(167, 161, 106);
-  background-image: url("./picturereact.jpg");
+  background-image: url("../public//assets/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

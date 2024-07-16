@@ -12,12 +12,13 @@
   border-radius: 40px;
   cursor: pointer;
   font-size: 16px;
-  color: blue;
+  color: rgb(110, 104, 104);
   font-weight: 700;
   margin-top: 1rem;
 }
 
 .information {
+  color: white;
   border: 0dvb;
   background-color: transparent;
   margin-right: 50rem;
@@ -36,14 +37,7 @@
   display: flex;
   gap: 20px;
   align-items: center;
-
-  /* border-radius: 8px; */
-
-  /* box-shadow: none;
-  box-sizing: unset; */
   background-color: transparent;
-  /* background-size: 0cqmax;
-  border-style: initial; */
 }
 .remember-forgot input {
   color: transparent;
@@ -55,10 +49,10 @@
 }
 
 .remember-forgot a {
-  color: black;
-  margin-left: 0.5rem;
+  color: lightskyblue;
+  /* margin-left: 0.5rem; */
 }
 
 .register-link a {
-  color: black;
+  color: lightskyblue;
 }

@@ -41,7 +41,8 @@ const LoginForm = () => {
       <div className="information">
         <form>
           <MdOutlineAdminPanelSettings style={{ fontSize: "40px" }} />
-          <h2>User Login</h2>
+          <h6> Start your journey</h6>
+          <h4>Sign Up to InsideLearner</h4>
           <div className="input-box">
             <label>Username:</label>
             <input
@@ -76,9 +77,10 @@ const LoginForm = () => {
             {" "}
             Login
           </button>
+          <br />
           <div className="register-link">
             <p>
-              Don't have an account? <Link to="/SignUpForm">Register</Link>{" "}
+              Have an account? <Link to="/SignUpForm">Sign in</Link>{" "}
             </p>
           </div>
         </form>
