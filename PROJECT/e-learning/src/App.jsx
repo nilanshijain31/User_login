@@ -10,12 +10,13 @@ import SignUpForm from "./Components/Auth/LoginForm/SignUpForm";
 import Js from "./Components/Auth/AllCourses/Js";
 import Html from "./Components/Auth/AllCourses/Html";
 import Git from "./Components/Auth/AllCourses/Git";
-
+import HomePage from "../src/Components/Auth/HomePage/homepage";
 function App() {
   return (
     <>
       <div>
         <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route path="/" element={<LoginForm />} />
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="/path" element={<Page />} />

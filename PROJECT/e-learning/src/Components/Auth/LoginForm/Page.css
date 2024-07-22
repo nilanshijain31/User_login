@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f0f0f0;
   height: 100%;
 }
 
@@ -17,7 +16,7 @@
   display: flex;
   align-items: center;
   padding: 10px 10px;
-  background-color: lightbrown;
+  background-color: black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -186,5 +185,6 @@
   background-origin: border-box;
 }
 .setting_logo {
-  width: 65px;
+  width: 133px;
+  padding-left: 4rem;
 }
