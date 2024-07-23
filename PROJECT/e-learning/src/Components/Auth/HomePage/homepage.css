@@ -1,25 +1,26 @@
 .homepage-background {
-  background-color: lightblue;
+  background-color: lightgrey;
 }
+
 .homepage {
   font-family: Arial, sans-serif;
-  text-align: center;
   color: #333;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  align-items: center;
 }
-
 .intro-logo-homepage {
-  width: 7rem;
+  width: 5rem;
   height: auto;
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 
 .header {
   background-color: white;
   color: black;
   padding: 0;
+  width: 100%;
 }
 
 .navbar ul {
@@ -28,19 +29,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 4rem;
+  height: 2rem;
 }
 
 .navbar li {
   display: inline;
   margin: 0 10px;
 }
+
 .info-about-us {
-  margin-left: 53rem;
+  margin-left: 52rem;
 }
+
 .name-of-website {
   font: normal;
 }
+
 .navbar a {
   color: black;
   text-decoration: none;
@@ -48,13 +52,51 @@
 }
 
 .main-content {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-  color: white;
+  color: black;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.welcome-section {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 20px 0;
+}
+
+.homepage-image {
+  width: 40rem;
+  background-image: url(../../../../public/assets/homepage.logo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 32rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.text-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 20px;
+  /* font-size: 5.2em; */
+}
+
+.welcome {
+  font: initial;
+  font-size: 5rem;
 }
 
 .all-about {
   margin-bottom: 40px;
+  width: 80%;
+  text-align: center;
 }
 
 .cta-button {
@@ -71,28 +113,32 @@
   justify-content: space-around;
   margin-top: 20px;
   flex-wrap: wrap;
+  width: 80%;
 }
 
 .feature {
   width: 22%;
-  background-color: black;
+  background-color: white;
   padding: 0;
-  border: 36px solid black;
-  border-radius: 5px;
-  margin-top: 4rem;
+  border: 36px solid white;
+  border-radius: 2px;
+  margin-top: 5rem;
 }
 
 .footer {
   background-color: #f1f1f1;
   padding: 10px;
   color: #777;
+  width: 100%;
 }
 
 .favourite-courses {
   flex: 1;
   display: flex;
   justify-content: space-around;
+  width: 80%;
 }
+
 .Image-hp {
   width: 22%;
   background-color: black;
@@ -103,20 +149,9 @@
   position: relative;
 }
 
-.Image-hp A-image {
-  background-image: url("../../../../public//assets/React.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-origin: border-box;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 10px;
-}
-.B-image {
-  background-image: url("../../../../public//assets/HTML.jpg");
+.A-image,
+.B-image,
+.C-image {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -128,15 +163,14 @@
   border-radius: 10px;
 }
 
+.A-image {
+  background-image: url("../../../../public/assets/React.png");
+}
+
+.B-image {
+  background-image: url("../../../../public/assets/HTML.jpg");
+}
+
 .C-image {
-  background-image: url("../../../../public//assets/js_logo.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-origin: border-box;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 10px;
+  background-image: url("../../../../public/assets/js_logo.jpg");
 }
