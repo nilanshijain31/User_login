@@ -73,7 +73,6 @@
 }
 .custom-dialog .MuiDialog-paper {
   display: flex;
-  /* width: 90% !important; */
   min-height: 80vh;
   max-height: 90vh;
   width: 60vw !important;
@@ -107,14 +106,12 @@
   cursor: pointer;
   flex-wrap: wrap;
   display: inline-flex;
-  /* padding: 15px 32px ;
-  align-items: center; */
   justify-content: start;
-  background-color: transparent; /* Example background color */
+  background-color: transparent;
   color: transparent;
-  font-size: 16px; /* Example font size */
-  text-decoration: none; /* Remove underlines */
-  cursor: pointer; /* Show pointer cursor on hover */
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
 }
 .custom-window1 button {
   color: white;
@@ -124,15 +121,11 @@
 }
 .a button {
   background-image: url("../../../../public//assets/React.png");
-  /* transition: transform 0.3s ease; */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-origin: border-box;
 }
-/* .a.button:hover {
-  transform: scale(1.2);
-} */
 .b button {
   background-image: url("../../../../public//assets/HTML.jpg");
   background-repeat: no-repeat;

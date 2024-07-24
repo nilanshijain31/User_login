@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./SignUpForm.css";
+import React, { useEffect, useState } from "react";
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
+import axios from "axios";
+import "./SignUpForm.css";
+import { getData } from "../../../api/api_calls";
 
 const SignUpForm = () => {
   const [formData, setFormData] = useState({
@@ -24,21 +25,42 @@ const SignUpForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here, e.g., sending data to backend
-    setIsRegistered(true);
 
-    // Reset form fields after submission (optional)
-    setFormData({
-      firstname: "",
-      lastname: "",
-      username: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-    });
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
 
-    // You can also redirect the user or show a success message
+    axios
+      .post("http://localhost:5000/api/signup", formData)
+      .then((response) => {
+        setIsRegistered(true);
+        // Reset form fields after submission
+        setFormData({
+          firstname: "",
+          lastname: "",
+          username: "",
+          email: "",
+          password: "",
+          confirmPassword: "",
+        });
+      })
+      .catch((error) => {
+        console.error("There was an error submitting the form!", error);
+      });
   };
+
+  const getSlash = async () => {
+    const response = await getData();
+    console.log(
+      response,
+      "<------------------------- This is the response from the backend"
+    );
+  };
+
+  useEffect(() => {
+    getSlash();
+  }, []);
 
   return (
     <div className="box">

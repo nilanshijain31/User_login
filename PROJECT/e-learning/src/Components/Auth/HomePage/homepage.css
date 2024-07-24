@@ -29,7 +29,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
+  height: 0;
+  margin-top: 2rem;
 }
 
 .navbar li {
@@ -58,9 +59,18 @@
   padding: 20px;
   color: black;
   width: 100%;
+  background-color: white;
+}
+.first-home {
   background-color: #f1f1f1;
 }
-
+.second-home {
+  background-color: white;
+  margin-top: 3rem;
+}
+.fourth-home {
+  background-color: white;
+}
 .welcome-section {
   display: flex;
   justify-content: space-between;
@@ -75,8 +85,9 @@
   background-position: center;
   background-size: cover;
   height: 32rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  margin-right: -8rem;
 }
 
 .text-content {
@@ -85,7 +96,7 @@
   flex-direction: column;
   justify-content: center;
   padding-right: 20px;
-  /* font-size: 5.2em; */
+  margin-left: 8rem;
 }
 
 .welcome {
