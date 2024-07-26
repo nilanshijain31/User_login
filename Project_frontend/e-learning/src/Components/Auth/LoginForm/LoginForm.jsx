@@ -37,7 +37,9 @@ const LoginForm = () => {
   };
 
   return (
+    
     <div className="wrapper">
+    <div className="intro-logo"> </div>
       <div className="information">
         <form>
           <MdOutlineAdminPanelSettings style={{ fontSize: "40px" }} />

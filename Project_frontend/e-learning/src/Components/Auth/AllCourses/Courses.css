@@ -37,6 +37,7 @@
 .inter_video {
   padding: 3rem 3rem 3rem 8rem;
   z-index: 999;
+  position: relative;
 }
 .person1 {
   position: absolute;
@@ -74,6 +75,7 @@
   width: 80px;
   height: auto;
   margin-left: 10px;
+  border-radius: 50%;
 }
 .home_logo {
   width: 80px !important;

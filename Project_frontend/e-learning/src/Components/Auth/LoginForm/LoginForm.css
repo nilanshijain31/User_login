@@ -57,3 +57,10 @@
 .register-link a {
   color: lightskyblue;
 }
+
+.intro-logo {
+  background-image: url(../../../../public/assets/logo.jpg);
+  width: 5rem;
+  height: auto;
+  margin-left: 3rem;
+}

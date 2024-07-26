@@ -6,8 +6,6 @@ import { getData } from "../../../api/api_calls";
 
 const SignUpForm = () => {
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
     username: "",
     email: "",
     password: "",
@@ -35,15 +33,15 @@ const SignUpForm = () => {
       .post("http://localhost:5000/api/signup", formData)
       .then((response) => {
         setIsRegistered(true);
-        // Reset form fields after submission
         setFormData({
-          firstname: "",
-          lastname: "",
           username: "",
           email: "",
           password: "",
           confirmPassword: "",
         });
+      })
+      .then((response) => {
+        console.log("User signed up successfully:", response.data);
       })
       .catch((error) => {
         console.error("There was an error submitting the form!", error);
@@ -68,32 +66,13 @@ const SignUpForm = () => {
         <form onSubmit={handleSubmit}>
           <div className="values">
             <MdOutlineAdminPanelSettings style={{ fontSize: "40px" }} />
-            <h2>Sign Up Form</h2>
+            <h6> Start your journey</h6>
+            <h4>Sign In to InsideLearner</h4>
             {isRegistered && (
-              <p style={{ color: "green", fontWeight: "bold" }}>
+              <p style={{ color: "gray", fontWeight: "bold" }}>
                 Registration successful! Please <a href="/login">login</a>.
               </p>
             )}
-            <div>
-              <label>Firstname:</label>
-              <input
-                type="text"
-                name="firstname"
-                value={formData.firstname}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div>
-              <label>Lastname:</label>
-              <input
-                type="text"
-                name="lastname"
-                value={formData.lastname}
-                onChange={handleChange}
-                required
-              />
-            </div>
             <div>
               <label>Username:</label>
               <input
@@ -135,7 +114,7 @@ const SignUpForm = () => {
               />
             </div>
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit">Sign In</button>
         </form>
       </div>
     </div>
