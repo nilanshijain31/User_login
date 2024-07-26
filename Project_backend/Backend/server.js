@@ -16,8 +16,6 @@ mongoose
   .catch((err) => console.log(err));
 
 const UserSchema = new mongoose.Schema({
-  firstname: String,
-  lastname: String,
   username: String,
   email: String,
   password: String,
@@ -26,11 +24,9 @@ const UserSchema = new mongoose.Schema({
 const User = mongoose.model("User", UserSchema);
 
 app.post("/api/signup", (req, res) => {
-  const { firstname, lastname, username, email, password } = req.body;
+  const { username, email, password } = req.body;
 
   const newUser = new User({
-    firstname,
-    lastname,
     username,
     email,
     password,
@@ -38,7 +34,7 @@ app.post("/api/signup", (req, res) => {
 
   newUser
     .save()
-    .then((user) => res.json(user))
+    .then((user) => res.json("Tested!!"))
     .catch((err) => res.status(400).json({ error: err.message }));
 });
 
