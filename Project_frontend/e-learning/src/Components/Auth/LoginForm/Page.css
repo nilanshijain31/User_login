@@ -1,4 +1,4 @@
-.container {
+.contain {
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -180,7 +180,7 @@
 }
 .setting_logo {
   width: 5rem;
-  margin-left: 4rem;
-  border-radius: 28%;
-  background-image: url(../../../../public/assets/setting.jpg);
+  margin-left: 5rem;
+
+  background-image: url(../../../../public/assets/set_logo.png);
 }

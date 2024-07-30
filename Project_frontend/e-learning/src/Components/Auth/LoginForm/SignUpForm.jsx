@@ -73,7 +73,8 @@ const SignUpForm = () => {
                 Registration successful! Please <a href="/login">login</a>.
               </p>
             )}
-            <div>
+
+            <div className="U">
               <label>Username:</label>
               <input
                 type="text"
@@ -83,7 +84,7 @@ const SignUpForm = () => {
                 required
               />
             </div>
-            <div>
+            <div className="E">
               <label>Email:</label>
               <input
                 type="email"
@@ -93,7 +94,7 @@ const SignUpForm = () => {
                 required
               />
             </div>
-            <div>
+            <div className="P">
               <label>Password:</label>
               <input
                 type="password"
@@ -103,7 +104,7 @@ const SignUpForm = () => {
                 required
               />
             </div>
-            <div>
+            <div className="C">
               <label>Confirm Password:</label>
               <input
                 type="password"
@@ -114,6 +115,7 @@ const SignUpForm = () => {
               />
             </div>
           </div>
+
           <button type="submit">Sign In</button>
         </form>
       </div>

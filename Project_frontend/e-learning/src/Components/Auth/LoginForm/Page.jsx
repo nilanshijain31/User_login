@@ -8,7 +8,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
-import settinglogo from "../../../../public/assets/setting.jpg";
+import settinglogo from "../../../../public/assets/set_logo.png";
 import { Link } from "react-router-dom";
 
 const Page = () => {
@@ -44,7 +44,7 @@ const Page = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="contain">
         <nav className="home-nav">
           <img src={assets?.LOGO} alt="Logo" className="intro-logo" />
           <div className="button-container">
